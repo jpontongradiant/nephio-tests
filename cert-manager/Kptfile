@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: cert-manager
+  annotations:
+    config.kubernetes.io/local-config: "true"
+upstream:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/catalog
+    directory: /distros/sandbox/cert-manager
+    ref: main
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/catalog
+    directory: /distros/sandbox/cert-manager
+    ref: main
+    commit: 826a88675b631e36b8e6c49a0706c29cb32afce0
+info:
+  description: certificate manager package to deploy cert-manager

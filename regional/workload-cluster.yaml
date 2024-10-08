@@ -1,0 +1,18 @@
+apiVersion: infra.nephio.org/v1alpha1
+kind: WorkloadCluster
+metadata: # kpt-merge: /example
+  name: regional
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'infra.nephio.org|WorkloadCluster|default|example'
+  labels:
+    nephio.org/region: us-west1
+    nephio.org/site-type: regional
+spec:
+  # Since injection only injects the spec, we need the name here as
+  # well as in metadata.
+  clusterName: regional
+  cnis:
+  - macvlan
+  - ipvlan
+  - sriov
+  masterInterface: eth1

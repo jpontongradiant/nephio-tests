@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata:
+  name: cluster-capi-kind-docker-templates
+  annotations:
+    config.kubernetes.io/local-config: "true"
+upstream:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/catalog
+    directory: /infra/capi/cluster-capi-kind-docker-templates
+    ref: main
+  updateStrategy: resource-merge
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/nephio-project/catalog
+    directory: /infra/capi/cluster-capi-kind-docker-templates
+    ref: main
+    commit: 826a88675b631e36b8e6c49a0706c29cb32afce0
+info:
+  description: This package provides the templates and classes for docker kind capi clusters

@@ -1,0 +1,8 @@
+apiVersion: ""
+kind: KptRevisionMetadata
+metadata:
+  name: mgmt-08c26219f9879acdefed3469f8c3cf89d5db3868
+  namespace: default
+  creationTimestamp: "2024-10-08T10:19:35Z"
+  resourceVersion: f01ac83aa47704a909f3f9b9250af15769373060
+  uid: 1c08a4e2-3d59-533b-99a8-7e2710d2511a

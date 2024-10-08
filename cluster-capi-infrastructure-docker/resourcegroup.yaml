@@ -1,0 +1,7 @@
+apiVersion: kpt.dev/v1alpha1
+kind: ResourceGroup
+metadata:
+  name: inventory-34312661
+  namespace: capd-system
+  labels:
+    cli-utils.sigs.k8s.io/inventory-id: c67e140505c6fc0d617dc3b9c23f59e13a319db4-1728377592447383471

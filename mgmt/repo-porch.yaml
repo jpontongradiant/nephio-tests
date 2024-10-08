@@ -1,0 +1,17 @@
+apiVersion: config.porch.kpt.dev/v1alpha1
+kind: Repository
+metadata: # kpt-merge: default/example-cluster-name
+  name: mgmt
+  namespace: default
+  annotations:
+    internal.kpt.dev/upstream-identifier: config.porch.kpt.dev|Repository|default|example-cluster-name
+spec:
+  content: Package
+  deployment: true
+  git:
+    branch: main
+    directory: /
+    repo: http://gitea.gitea.svc.cluster.local:3000/nephio/mgmt.git
+    secretRef:
+      name: mgmt-access-token-porch
+  type: git
